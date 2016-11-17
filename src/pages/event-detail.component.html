@@ -1,0 +1,13 @@
+<h3>Event DETAIL</h3>
+
+<p *ngIf="currentEvent != undefined">
+  Name: {{currentEvent.name}}
+  <br />
+  <a [routerLink]="['EditEvent', {id: currentEmployee.id}]">
+    EDIT
+  </a>
+  <button type="button" class="btn btn-default"
+          (click)="deleteHandler(currentEvent.id)">
+          Delete
+  </button>
+</p>

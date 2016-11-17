@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>Event Edit Form</h3>
+    <form (ngSubmit)="onSubmit()" #eventForm="ngForm" *ngIf="currentEvent != undefined">
+      <div class="form-group">
+        <label for="name">Name</label>
+       <input type="text" class="form-control" required [(ngModel)]="currentEvent.name"
+            ngControl="name"  #name="ngForm">
+       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+         Name is required
+       </div>
+
+      </div>
+
+      <label>Money</label>
+       <input type="text" name="form-control">
+       
+      <button type="button" class="ui button active" (click)="editEvent()" [disabled]="!eventForm.form.valid">Update</button>
+    </form>
+</div>

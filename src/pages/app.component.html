@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <h2>Money management APP</h2>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div>
+	<a [routerLink] = "['NewEvent']" class="headings">
+    	<button type="button" class="btn btn-default">Add Event</button>
+	</a>
+
+	<a [routerLink] = "['EventList']" class="headings">
+    	<button type="button" class="btn btn-default">Event List</button>
+	</a>
+</div>
+
+<router-outlet></router-outlet>
